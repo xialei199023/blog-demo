@@ -10,8 +10,18 @@ package demo.blog.es.crud;
 public class Main {
 
 	public static void main(String[] args) {
-		EsCrud crud = new EsCrud(new MyNodeClient());
-		String student1 = crud.get("1");
-		System.out.println(student1);
+		EsCrud crud = new EsCrud(ClientFactory.transportClient());
+		String index = "person";
+		String type = "test";
+		crud.createIndex(index);
+		//crud.addMapping(index, type);
+		//crud.deleteIndex(index);
+		
+		//crud.createDoc(index, type, "2");
+		//crud.updateDoc(index, type, "2");
+		//System.out.println(crud.get(index, type, "1"));
+		//System.out.println(crud.queryByFilter(index, type));
+		//crud.deleteByQuery(index, type);
+		//crud.min(index, type);
 	}
 }

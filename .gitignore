@@ -1,5 +1,6 @@
 .project
 .settings
 .classpath
+.metadata
 target
 data
